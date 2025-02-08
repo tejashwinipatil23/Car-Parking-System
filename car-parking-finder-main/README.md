@@ -1,66 +1,23 @@
-# Car-parking-Detection
-- This project find outs the count of empty and occioped parking spaces in a car-parking-lot using through digital image processing techniques form opencv.
+This presents a real-time parking space detection system using OpenCV and Python. The system uses a camera to capture images of a parking lot, and then uses OpenCV to process the images and detect parking spaces. The system is able to detect parking spaces in real-time, and can also detect the location and size of parking spaces. The system is implemented using Python and OpenCV, and is able to run on a variety of platforms, including Windows, Linux, and macOS. The results show that the system is effective for detecting parking spaces in real-time, and can be used in a variety of applications, including parking management systems and autonomous vehicles.
+Parking Space Detection 
 
-- Clone the repository.
-```
-git clone https://github.com/noorkhokhar99/car-parking-finder.git
-```
-- Goto the cloned folder.
-```
-cd car-parking-finder
+Problem Definition 
 
-```
-- Upgrade pip with mentioned command below.
-```
-pip install --upgrade pip
-```
-- Install requirements with mentioned command below.
-```
-pip install -r requirements.txt
-```
-- Run the code with mentioned command below.
+Finding out the empty parking spaces in a car parking lot automatically from a surveillance camera. 
 
-`app.py`
+Solution 
+Extracting the parking lot coordinates from the imagecar_park_coordinate_generator.py script.
+ Then use these coordinates to process every car parking space individually. Implementing digital image processing techniques to find out empty and occupied parking spaces. drawing the results into the image.
 
- 
-## Example Results
+Parking system detection using OOP concepts, OpenCV, and Python:
+The Parking System class is the core component of the system, encapsulating the logic for detecting parking spaces and displaying the results. It utilizes OpenCV's Video Capture class to capture the video feed from a camera or file, and then applies image processing techniques such as thresholding, contour detection, and approximation to identify parking spaces.
+
+The image processing techniques used in this system are designed to detect rectangular shapes, which are typical of parking spaces. The system first converts the video frame to grayscale and then applies thresholding to segment the image into regions of interest. Contour detection is then used to identify the boundaries of these regions, and approximation is applied to simplify the contours and detect rectangular shapes.
+Once the parking spaces have been detected, the system uses OpenCV's High-Level GUI Programming to display the video feed and highlight the detected parking spaces. The GUI display provides a simple and intuitive visual representation of the parking system, allowing users to easily identify available parking spaces.
 
 
-<p align="center">
-<img src="data/results/example_result.png">
+Results:
+![image](https://github.com/user-attachments/assets/06d24878-8bf0-4165-81c4-a642a85e8cdc)
+![image](https://github.com/user-attachments/assets/defe936e-f744-404c-b994-c30b6af297fd)
+![image](https://github.com/user-attachments/assets/e1e4058f-57a6-4a85-abff-94d0cae97257)
 
-
-
-
-
-## Problem Defination
-- finding out the empty parking spaces in a car-parking-lot aotomatically from servillance camera.
-
-## solution
-- Extracting the parking lot coordinates form the image by car_park_coordinate_generator.py script.
-- Then use this coordinates to processing every car parking space individualy.
-- Implementing digital iamge processing techniques to find out the empty and occupied parking spaces.
-- drawing the reults into the image. 
-
-## Used The Concepts
-- OOP concepts
-- Opencv High Level GUI Programming
-- Opencv Basic Image Processing
-- Doc String
-- Python Type Annotation
-
-
-
-### Controlling with the project
-- labelling   __car park__
-    - you can click left  mouse button. It will draw the its order.
-- removing the label __car park__
-    - you will do same thing above with mouse middle button instead of clicking left mouse button.
-
-- __Exit__ from the project
-    - just click __q__ button on your keyboard. (When your Operating System Selected the project window)
-- __Saving__ the results
-    - just click __s__ button on your keyboard. (When your Operating System Selected the project window)
-
-## Note 
-- CarParkingPos  is a pickle file which stores the empty car parking positions.  The car park areas represented as rectangle and they stored with coordinate of  its top left point.
